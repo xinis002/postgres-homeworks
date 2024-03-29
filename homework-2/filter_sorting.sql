@@ -10,6 +10,7 @@ ORDER BY ship_country, ship_city;
 SELECT AVG (shipped_date - order_date) as total  FROM orders where ship_country='Germany';
 
 -- 4. минимальную и максимальную цену среди продуктов, не снятых с продажи (таблица products, колонки unit_price, discontinued не равно 1)
+SELECT MIN(unit_price), MAX(unit_price) FROM products WHERE discontinued IS NOT NULL; 
 
 
 -- 5. минимальную и максимальную цену среди продуктов, не снятых с продажи и которых имеется не меньше 20 (таблица products, колонки unit_price, units_in_stock, discontinued не равно 1)
