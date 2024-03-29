@@ -14,3 +14,4 @@ SELECT MIN(unit_price), MAX(unit_price) FROM products WHERE discontinued IS NOT 
 
 
 -- 5. минимальную и максимальную цену среди продуктов, не снятых с продажи и которых имеется не меньше 20 (таблица products, колонки unit_price, units_in_stock, discontinued не равно 1)
+SELECT MIN(unit_price), MAX(unit_price) FROM products WHERE discontinued IS NOT NULL and units_in_stock > 20; 
